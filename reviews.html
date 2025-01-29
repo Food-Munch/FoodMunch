@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 0.8rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .welcome-note {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .rating-graph {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .rating-category {
+            margin-bottom: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .rating-bar-container {
+            display: flex;
+            flex-grow: 1;
+            height: 30px;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .rating-bar-filled {
+            background-color: #ff6f61;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .rating-bar-unfilled {
+            background-color: white;
+            flex-grow: 1;
+        }
+
+        .rating-category span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .rating-bar-container span {
+            position: absolute;
+            right: 10px;
+            font-size: 14px;
+        }
+
+        .reviews-section {
+            margin-bottom: 30px;
+        }
+
+        .review {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .review img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .leave-review {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e05a4f;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1 style="color: #ff6f61;">WHISK IT, SIZZLE IT, SERVE IT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact-info.html">Contact Info</a></li>
+                <li><a href="founders.html">Founder Details</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome-note">
+            <h2>Thank you for visiting!</h2>
+            <p>We value your feedback. Share your thoughts and check out what others are saying.</p>
+        </div>
+
+        <div class="rating-graph">
+            <h3>Customer Ratings</h3>
+
+            <div class="rating-category">
+                <span>5 Stars</span>
+                <div class="rating-bar-container">
+                    <div class="rating-bar-filled" id="rating-5" style="width: 0%;"></div>
+                    <div class="rating-bar-unfilled"></div>
+                    <span id="rating-5-count">0%</span>
+                </div>
+            </div>
+
+            <div class="rating-category">
+                <span>4 Stars</span>
+                <div class="rating-bar-container">
+                    <div class="rating-bar-filled" id="rating-4" style="width: 0%;"></div>
+                    <div class="rating-bar-unfilled"></div>
+                    <span id="rating-4-count">0%</span>
+                </div>
+            </div>
+
+            <div class="rating-category">
+                <span>3 Stars</span>
+                <div class="rating-bar-container">
+                    <div class="rating-bar-filled" id="rating-3" style="width: 0%;"></div>
+                    <div class="rating-bar-unfilled"></div>
+                    <span id="rating-3-count">0%</span>
+                </div>
+            </div>
+
+            <div class="rating-category">
+                <span>2 Stars</span>
+                <div class="rating-bar-container">
+                    <div class="rating-bar-filled" id="rating-2" style="width: 0%;"></div>
+                    <div class="rating-bar-unfilled"></div>
+                    <span id="rating-2-count">0%</span>
+                </div>
+            </div>
+
+            <div class="rating-category">
+                <span>1 Star</span>
+                <div class="rating-bar-container">
+                    <div class="rating-bar-filled" id="rating-1" style="width: 0%;"></div>
+                    <div class="rating-bar-unfilled"></div>
+                    <span id="rating-1-count">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-section" id="reviews-section">
+            <h3>Customer Reviews</h3>
+            <!-- New reviews will be added here -->
+        </div>
+
+        <div class="leave-review">
+            <h3>Leave a Review</h3>
+            <textarea id="review-text" placeholder="Write your review here..."></textarea>
+            <label>Rate the Product:</label>
+            <select id="review-rating">
+                <option value="" selected>Choose a rating</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+            </select>
+            <label>Upload Photo/Video:</label>
+            <input type="file" id="review-file">
+            <button onclick="submitReview()">Submit</button>
+        </div>
+    </main>
+
+    <footer>
+        <p style="color: #ff6f61;">&copy; 2025 WHISK IT, SIZZLE IT, SERVE IT. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let ratings = {
+            5: 0,
+            4: 0,
+            3: 0,
+            2: 0,
+            1: 0
+        };
+
+        let totalReviews = 0;
+
+        function updateRatingGraph() {
+            for (let i = 1; i <= 5; i++) {
+                const percentage = totalReviews > 0 ? (ratings[i] / totalReviews) * 100 : 0;
+                document.getElementById(`rating-${i}`).style.width = `${percentage}%`;
+                document.getElementById(`rating-${i}-count`).textContent = `${Math.round(percentage)}%`;
+            }
+        }
+
+        function submitReview() {
+            const reviewText = document.getElementById("review-text").value.trim();
+            const ratingValue = document.getElementById("review-rating").value;
+            const fileInput = document.getElementById("review-file");
+
+            if (ratingValue) {
+                ratings[parseInt(ratingValue)]++;
+                totalReviews++;
+                updateRatingGraph();
+            }
+
+            if (reviewText || fileInput.files.length > 0) {
+                const reviewDiv = document.createElement("div");
+                reviewDiv.classList.add("review");
+
+                let reviewContent = "";
+                if (reviewText) {
+                    reviewContent += `<p>"${reviewText}"</p>`;
+                }
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const fileExtension = file.name.split('.').pop().toLowerCase();
+                        if (fileExtension === "mp4") {
+                            reviewContent += `<video controls><source src="${e.target.result}" type="video/mp4"></video>`;
+                        } else if (["jpg", "jpeg", "png"].includes(fileExtension)) {
+                            reviewContent += `<img src="${e.target.result}" alt="Review Image">`;
+                        }
+                        reviewDiv.innerHTML = reviewContent;
+                        document.getElementById("reviews-section").appendChild(reviewDiv);
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    reviewDiv.innerHTML = reviewContent;
+                    document.getElementById("reviews-section").appendChild(reviewDiv);
+                }
+            }
+
+            document.getElementById("review-text").value = "";
+            document.getElementById("review-rating").value = "";
+            document.getElementById("review-file").value = "";
+        }
+    </script>
+</body>
+
+</html>

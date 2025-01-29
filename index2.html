@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Categories</title>
+    <style>
+        @font-face {
+            font-family: 'Breve Sans';
+            src: url('breve-sans-title-bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Pacifico';
+            src: url('pacifico-regular.woff2') format('woff2');
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffe6e1, #fff5ee);
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ff6f61;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .category h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            color: #ff6f61;
+            margin-bottom: 1rem;
+        }
+
+        .category p {
+            font-family: 'Breve Sans', sans-serif;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.5rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>WHISK IT, SIZZLE IT, SERVE IT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="reviews.html">Review</a></li>
+                <li><a href="contact-info.html">Contact-info</a></li>
+                <li><a href="founders.html">Founder Details</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Explore Culinary Delights Across Categories</h2>
+        <div class="categories">
+            <div class="category" onclick="navigateTo('morning-bites.html')">
+                <h2>Morning Bites</h2>
+                <p>Start your day with delicious breakfast options.</p>
+            </div>
+            <div class="category" onclick="navigateTo('midday-feasts.html')">
+                <h2>Midday Feasts</h2>
+                <p>Satisfy your hunger with hearty lunch recipes.</p>
+            </div>
+            <div class="category" onclick="navigateTo('sweet-cravings.html')">
+                <h2>Sweet Cravings</h2>
+                <p>Indulge in delectable desserts and treats.</p>
+            </div>
+            <div class="category" onclick="navigateTo('flavorful-breaks.html')">
+                <h2>Flavorful Breaks</h2>
+                <p>Enjoy snacks bursting with flavor and goodness.</p>
+            </div>
+            <div class="category" onclick="navigateTo('moonlight-meals.html')">
+                <h2>Moonlight Meals</h2>
+                <p>Dive into delightful dinners for cozy nights.</p>
+            </div>
+            <div class="category" onclick="navigateTo('kitchen-basics.html')">
+                <h2>Kitchen Basics</h2>
+                <p>Master the essentials of cooking and preparation.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FoodMunch. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

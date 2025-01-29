@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cravings</title>
+    <style>
+        @font-face {
+            font-family: 'Breve Sans';
+            src: url('breve-sans-title-bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Pacifico';
+            src: url('pacifico-regular.woff2') format('woff2');
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffe6e1, #fff5ee);
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ff6f61;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .countries {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .country {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .country:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .country h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            color: #ff6f61;
+            margin-bottom: 1rem;
+        }
+
+        .country p {
+            font-family: 'Breve Sans', sans-serif;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .quote {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: #444;
+            font-style: italic;
+            font-family: 'Pacifico', cursive;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.5rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .countries {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>WHISK IT, SIZZLE IT, SERVE IT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="reviews.html">Review</a></li>
+                <li><a href="contact-info.html">Contact-info</a></li>
+                <li><a href="founders.html">Founder Details</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Sweet Cravings</h2>
+        <p>Satisfy your sweet tooth with desserts and treats from every corner of the world!</p>
+        <div class="countries">
+            <div class="country">
+                <h2>Italy</h2>
+                <p>Delight in creamy gelato and rich tiramisu.</p>
+            </div>
+            <div class="country">
+                <h2>India</h2>
+                <p>Relish gulab jamun, jalebi, and barfi.</p>
+            </div>
+            <div class="country">
+                <h2>Japan</h2>
+                <p>Savor mochi, dorayaki, and sweet bean pastries.</p>
+            </div>
+            <div class="country">
+                <h2>Mexico</h2>
+                <p>Enjoy churros, tres leches cake, and flan.</p>
+            </div>
+            <div class="country">
+                <h2>France</h2>
+                <p>Indulge in macarons, eclairs, and creme brulee.</p>
+            </div>
+            <div class="country">
+                <h2>China</h2>
+                <p>Delight in mooncakes, sesame balls, and tangyuan.</p>
+            </div>
+            <div class="country">
+                <h2>Thailand</h2>
+                <p>Try mango sticky rice and coconut custard.</p>
+            </div>
+            <div class="country">
+                <h2>Spain</h2>
+                <p>Sample churros con chocolate and flan.</p>
+            </div>
+            <div class="country">
+                <h2>USA</h2>
+                <p>Enjoy brownies, cheesecakes, and apple pies.</p>
+            </div>
+        </div>
+        <div class="quote">"Desserts are the fairy tales of the kitchen."</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FoodMunch. All rights reserved.</p>
+    </footer>
+</body>
+</html>

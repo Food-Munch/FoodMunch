@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FoodMunch</title>
+    <style>
+        @font-face {
+            font-family: 'Breve Sans';
+            src: url('breve-sans-title-bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Gudeg Theo';
+            src: url('gudeg-theo-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Pacifico';
+            src: url('pacifico-regular.woff2') format('woff2');
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: linear-gradient(to bottom, #ffe6e1, #fff5ee);
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .contact-info h3 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #ff6f61;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            font-family: 'Gudeg Theo', serif;
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 3rem;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 2rem; /* Added margin to separate the two rows */
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            color: #ff6f61;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-family: 'Pacifico', cursive;
+            font-size: 1.2rem;
+            color: #ff6f61;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .contact-card a:hover {
+            color: #e65100;
+        }
+
+        .contact-card a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #ff6f61;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s ease-out;
+        }
+
+        .contact-card a:hover::after {
+            transform: scaleX(1);
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            color: #fff;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .contact-info h3 {
+                font-size: 2rem;
+            }
+
+            .contact-info p {
+                font-size: 1rem;
+            }
+
+            .contact-cards {
+                grid-template-columns: 1fr; /* Stacking the cards on smaller screens */
+                margin-bottom: 1rem; /* Margin between stacked cards */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1 style="color: #ff6f61;">WHISK IT, SIZZLE IT, SERVE IT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="reviews.html">Review</a></li>
+                <li><a href="contact-info.html">Contact-info</a></li>
+                <li><a href="founders.html">Founder Details</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h3>We'd Love to Hear From You!</h3>
+            <p>Feel free to reach out through any of the channels below:</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:info@foodmunch.com">info@foodmunch.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Phone</h4>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+            </div>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fab fa-instagram"></i>
+                    <h4>Instagram</h4>
+                    <a href="https://www.instagram.com/foodmunch" target="_blank">@foodmunch</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-twitter"></i>
+                    <h4>X (Twitter)</h4>
+                    <a href="https://www.x.com/foodmunch" target="_blank">@foodmunch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="color: #ff6f61;">&copy; 2025 FoodMunch. All rights reserved.</p>
+    </footer>
+</body>
+</html>

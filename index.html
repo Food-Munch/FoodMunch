@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodMunch - Home</title>
+    <style>
+        @font-face {
+            font-family: 'Breve Sans';
+            src: url('breve-sans-title-bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Gudeg Theo';
+            src: url('gudeg-theo-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Pacifico';
+            src: url('pacifico-regular.woff2') format('woff2'); /* Replace with the actual path to Pacifico or any other font */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ff6f61;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('image.jpg') center/cover no-repeat;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero .tagline {
+            margin-top: 8rem;
+        }
+
+        .hero .chatbox {
+            margin-top: 2rem;
+            padding: 1rem 1.5rem;
+            border: 4px solid #ff6f61;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            color: #ff6f61;
+            background-color: #fff;
+        }
+
+        .hero .chatbox p:first-child {
+            font-family: 'Breve Sans', sans-serif;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+        .hero .chatbox p:last-child {
+            font-family: 'Gudeg Theo', serif;
+            font-size: 1.5rem;
+        }
+
+        .hero .chatbox button {
+            margin-top: 0.2rem;
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            font-family: 'Pacifico', cursive;
+            color: #fff;
+            background-color: #f57c00;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .chatbox button:hover {
+            background-color: #e65100;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1 style="color: #ff6f61;">WHISK IT, SIZZLE IT, SERVE IT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="reviews.html">Review</a></li>
+                <li><a href="contact-info.html">Contact-info</a></li>
+                <li><a href="founders.html">Founder Details</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="tagline">
+                <div class="chatbox">
+                    <p>YOUR JOURNEY TO TASTE BEGINS HERE !!</p>
+                    <p>COOK SMART, EAT BETTER</p>
+                    <button id="savor-secrets-btn">Savor the Secrets</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FoodMunch. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const INDEX2_URL = 'index2.html';
+        const savorSecretsBtn = document.getElementById('savor-secrets-btn');
+
+        savorSecretsBtn.addEventListener('click', () => {
+            window.location.href = INDEX2_URL;
+        });
+    </script>
+</body>
+</html>

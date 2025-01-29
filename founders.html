@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHISK IT, SIZZLE IT, SERVE IT</title>
+    <style>
+        @font-face {
+            font-family: 'Pacifico';
+            src: url('pacifico-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Gudeg Theo';
+            src: url('gudeg-theo-regular.woff2') format('woff2');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6d5;
+            background-image: url('foundersbg.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ff6f61;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        .logo h1 {
+            color: #ff6f61;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffdbdb;
+        }
+
+        main {
+            margin: 5rem auto 3rem auto;
+            text-align: center;
+            flex: 1;
+        }
+
+        .founders-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #ff3d71;
+            margin-bottom: 2rem;
+        }
+
+        .founder-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .founder-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .founder-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .founder-card h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            color: #ff3d71;
+            margin-bottom: 1rem;
+        }
+
+        .founder-card p {
+            font-family: 'Gudeg Theo', serif;
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 0.8rem;
+        }
+
+        .founder-card a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Pacifico', cursive;
+            font-size: 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Dynamic underline effect for external links only */
+        a[href^="https://"]::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff6f61;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        a[href^="https://"]:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.9);
+            text-align: center;
+            padding: 0.5rem 0;
+            width: 100%;
+            font-size: 0.8rem;
+            color: #fff;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>WHISK IT, SIZZLE IT, SERVE IT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="reviews.html">Review</a></li>
+                <li><a href="contact-info.html">Contact-info</a></li>
+                <li><a href="founders.html">Founder Details</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="founders-title">Meet Our Founders</h2>
+        <section class="founder-cards-container">
+            <div class="founder-card">
+                <h2>D.V.S.NEHA</h2>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Instagram: <a href="https://www.instagram.com/johndoe" target="_blank">@johndoe</a></p>
+                <p>X (Twitter): <a href="https://www.x.com/johndoe" target="_blank">@johndoe</a></p>
+            </div>
+            <div class="founder-card">
+                <h2>K.Y.VAISHNAVI</h2>
+                <p>Phone: +1 (234) 567-8901</p>
+                <p>Instagram: <a href="https://www.instagram.com/janesmith" target="_blank">@janesmith</a></p>
+                <p>X (Twitter): <a href="https://www.x.com/janesmith" target="_blank">@janesmith</a></p>
+            </div>
+            <div class="founder-card">
+                <h2>B.JAYASRI</h2>
+                <p>Phone: +1 (345) 678-9012</p>
+                <p>Instagram: <a href="https://www.instagram.com/emilydavis" target="_blank">@emilydavis</a></p>
+                <p>X (Twitter): <a href="https://www.x.com/emilydavis" target="_blank">@emilydavis</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="color: #ff6f61;">&copy; 2025 FoodMunch. All rights reserved.</p>
+    </footer>
+</body>
+</html>

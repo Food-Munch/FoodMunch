@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        @font-face {
+            font-family: 'Breve Sans';
+            src: url('breve-sans-title-bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Gudeg Theo';
+            src: url('gudeg-theo-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Pacifico';
+            src: url('pacifico-regular.woff2') format('woff2');
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ff6f61;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 0.8rem;
+        }
+
+        main {
+            padding: 2rem;
+            line-height: 1.8;
+        }
+
+        h1, h2 {
+            color: #ff5733;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlights ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .highlights ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlights {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #fff5f0;
+            border-left: 5px solid #ff6f61;
+            border-radius: 5px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .section-content {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1 style="color: #ff6f61;">WHISK IT, SIZZLE IT, SERVE IT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="reviews.html">Review</a></li>
+                <li><a href="contact-info.html">Contact-info</a></li>
+                <li><a href="founders.html">Founder Details</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-us">
+            <h1>OUR JOURNEY</h1>
+            <p>We are three passionate B.Tech students who found our calling in the fascinating world of web development. What started as a spark of curiosity quickly turned into a flame of dedication, motivating us to create something truly unique. This project is not just a platform; it’s a culmination of our learning, creativity, and shared vision. Our journey has been fueled by countless brainstorming sessions, coding marathons, and an unwavering belief in the power of technology to make life better. Together, we aim to inspire others, just as we have been inspired, by turning dreams into reality.</p>
+
+            <h2>OUR PURPOSE</h2>
+            <p>Our mission is to create an ad-free, user-friendly platform that offers easy access to a diverse array of recipes, all in one place. Imagine a world where you can save your favorite recipes to a personal library, ensuring you never lose track of them. Our vision is to revolutionize how recipes are accessed and followed. From clear ingredient lists with precise measurements to step-by-step animated instructions that make cooking fun and intuitive, we strive to make culinary adventures accessible to everyone. Additionally, our shopping list generator simplifies planning, turning your cooking dreams into reality with ease and efficiency. We’re here to make cooking not just a necessity but an enjoyable and seamless experience.</p>
+        </section>
+
+        <section class="highlights">
+            <h2>WHY PEOPLE SHOULD USE THIS PLATFORM</h2>
+            <ul>
+                <li><strong>Save Recipes:</strong> Easily save your favorite recipes to your personal library for future access.</li>
+                <li><strong>Clear Ingredients:</strong> View detailed ingredient lists with accurate measurements.</li>
+                <li><strong>Step-by-Step Instructions:</strong> Follow animated guides that simplify the cooking process, ideal for all levels of expertise.</li>
+                <li><strong>Shopping List Generator:</strong> Create a comprehensive shopping list based on your selected recipes’ ingredients.</li>
+                <li><strong>Interactive Visuals:</strong> Enjoy engaging visuals that make learning and executing recipes a delightful experience.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-content">Welcome to Whisk It, Sizzle It, Serve It—where food meets imagination, and every meal becomes a story worth sharing. Created by three passionate B.Tech students with a shared love for cooking and innovation, our app is designed to transform your kitchen into a world of culinary exploration and creativity.</p>
+
+            <h3 class="section-title">Why We Created This App</h3>
+            <p class="section-content">It all started with a simple question: What if anyone could explore global cuisines, master recipes, and enjoy cooking—all without the usual stress and interruptions? As students juggling academics and hobbies, we wanted a tool that would inspire, educate, and simplify cooking for everyone. And thus, Whisk It, Sizzle It, Serve It was born.</p>
+
+            <h3 class="section-title">Explore the Magic of Cooking</h3>
+            <p class="section-content">
+                <strong>Your Culinary Passport:</strong> Travel the world through food. From Morning Bites to Moonlight Dinners, each section is packed with recipes from diverse countries—think fluffy Indian idlis, hearty American pancakes, and savory Spanish tortillas.<br>
+                <strong>Interactive & Immersive:</strong> Enjoy an intuitive experience with animations that guide you step by step, detailed processes to master any dish, and nutrition facts tailored to your health needs.<br>
+                <strong>Create Your Story:</strong> Save your favorite recipes, curate shopping lists, and share your creations with family and friends.
+            </p>
+
+            <h3 class="section-title">What Sets Us Apart</h3>
+            <p class="section-content">
+                <strong>No Ads, Just Food:</strong> Say goodbye to interruptions. Cook in peace with an ad-free experience, because your time in the kitchen should be sacred.<br>
+                <strong>Personalized Guidance:</strong> Whether you're a beginner or a seasoned chef, our app adapts to your level, offering recommendations, tips, and insights to elevate your skills.<br>
+                <strong>Celebrate Cultures:</strong> Discover the heart and soul of global cuisines. Each recipe comes with a backstory, connecting you to the traditions and people behind the dish.
+            </p>
+
+            <h3 class="section-title">Our Vision</h3>
+            <p class="section-content">At Whisk It, Sizzle It, Serve It, we see cooking as more than a chore—it’s a way to create memories, bond with loved ones, and express yourself. We aim to inspire food enthusiasts everywhere to explore new flavors, embrace creativity, and fall in love with the art of cooking.</p>
+
+            <h3 class="section-title">Join the Movement</h3>
+            <p class="section-content">With Whisk It, Sizzle It, Serve It, you're not just following recipes—you’re part of a global community of food lovers, dreamers, and creators. Let’s turn every meal into an adventure and every recipe into a masterpiece.</p>
+        </section>
+    </main>
+    <footer>
+        <p style="color: #ff6f61;">&copy; 2025 FoodMunch. All rights reserved.</p>
+    </footer>
+</body>
+</html>
